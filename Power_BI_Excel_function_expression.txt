@@ -1,0 +1,62 @@
+Power BI
+- Filtering of Excel data function expression
+
+
+
+매출액 = [수량]*RELATED('제품정보'[단가])    # 1 대 다 테이블일 때, 다 테이블에서 1 테이블 것 가져올 때 사용
+
+
+
+<달력> 테이블
+
+달력 = CALENDAR(min('매출관리'[주문일]), MAX('매출관리'[주문일]))
+
+달력 = ADDCOLUMNS(CALENDAR(min('매출관리'[주문일]), MAX('매출관리'[주문일])),
+        "년도", FORMAT([Date], "yyyy년"))
+
+
+
+* Alt + Enter : 함수식 창에서 Enter 처리
+
+
+
+달력 = ADDCOLUMNS(CALENDAR(min('매출관리'[주문일]), MAX('매출관리'[주문일])),
+        "년도", FORMAT([Date], "yyyy년"), "월(한글)", FORMAT([Date], "m월"),
+        "월", month([Date]),
+        "분기", "Q"&FORMAT([Date], "q"))
+
+
+달력 = ADDCOLUMNS(CALENDAR(min('매출관리'[주문일]), MAX('매출관리'[주문일])),
+        "년도", FORMAT([Date], "yyyy년"), "월(한글)", FORMAT([Date], "m월"),
+        "월", month([Date]),
+        "분기", "Q"&FORMAT([Date], "q"),
+        "요일", FORMAT([Date], "aaa"))
+
+
+달력 = ADDCOLUMNS(CALENDAR(min('매출관리'[주문일]), MAX('매출관리'[주문일])),
+        "년도", FORMAT([Date], "yyyy년"), "월(한글)", FORMAT([Date], "m월"),
+        "월", month([Date]),
+        "분기", "Q"&FORMAT([Date], "q"),
+        "요일", FORMAT([Date], "aaa"),
+        "년월", FORMAT([Date], "yyyymm"))
+
+
+=> 분석 위해 <달력>테이블과 <매출관리> 테이블의 주문일과 관계 설정
+
+
+
+**열 기준 정렬 (월(한글) -> 월)로 변경
+
+**<달력>, <매출관리>date - <매출관리> 매출액  (달력 Date 는 날짜 계층 형성 가능 / <매출관리> 주문일에는 계층형성 안 됨
+
+
+- Drill down 계층 형성 된 경우에만 가능
+드릴 다운 누른 상태에서 그래프 일부 클릭하면,
+- 드릴 다운은 필터 된 것에서 필터 <-> 드릴 업
+
+- 설정 안 된 상태에서 그래프 일부 클릭하면, 선택한 데이터만 필터 기능
+
+
+총매출 = SUM('매출관리'[매출액])   #시각화 위해 요약한 값
+
+
