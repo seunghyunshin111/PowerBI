@@ -60,3 +60,49 @@ Power BI
 총매출 = SUM('매출관리'[매출액])   #시각화 위해 요약한 값
 
 
+
+
+
+
+
+#2
+
+
+
+
+표시년도 = Month(max('달력'[년도]))
+
+표시월 = Month(max('달력'[월]))
+
+
+**caculate (속도 빠름)
+calculate(합계, 조건)
+calcultate(sum(), filter(테이블, 조건식))
+calcultate(측정값, filter(테이블, 조건식))
+
+
+&& 그리고
+|| 또는
+in 포함
+
+
+
+
+
+** 구글에 "DAX 함수"라고 치면 필요한 함수 찾을 수 있다. (Power BI)
+
+
+
+*기본 수식 이해 위해 함수식 표현
+당월매출 = CALCULATE([총매출], FILTER('달력', YEAR('달력'[Date])&MONTH('달력'[Date])=year(max('달력'[Date]))&month(max('달력'[Date]))
+
+
+
+
+
+
+
+
+
+
+
