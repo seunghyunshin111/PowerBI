@@ -16,5 +16,5 @@
 
 <br>
 
-- Python으로 Data EDA 한 Python 코드 업로드 할 것
+- Python으로 Data EDA한 Python 코드 업로드 할 것
 
