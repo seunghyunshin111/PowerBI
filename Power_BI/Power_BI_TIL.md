@@ -10,7 +10,9 @@
 
   > [Power BI Gallery](https://community.powerbi.com/t5/Data-Stories-Gallery/bd-p/DataStoriesGallery)
   >
-  > [Power BI 'DAX' 함수 | Microsoft Docs]( https://docs.microsoft.com/ko-kr/power-bi/transform-model/desktop-quickstart-learn-dax-basics)
+  > [Power BI 'DAX' 함수 기본사항 | Microsoft Docs]( https://docs.microsoft.com/ko-kr/power-bi/transform-model/desktop-quickstart-learn-dax-basics)
+  >
+  > [Power BI 'DAX' 함수 참조](https://docs.microsoft.com/ko-kr/dax/dax-function-reference)
 
 - DAX 함수 통해 Filter 많이 사용하니, Document 참고
 
