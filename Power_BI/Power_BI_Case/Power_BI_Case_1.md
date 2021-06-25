@@ -4,7 +4,7 @@
 
 <br>
 
-## Using DAX
+## Using DAX in Power BI
 
 - 총매출 = SUM('MAIN_TABLE'[WON_PRICE])
 
