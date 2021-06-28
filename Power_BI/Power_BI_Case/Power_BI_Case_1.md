@@ -1,6 +1,6 @@
 # Power_BI_Case_1
 
-![Case1](https://user-images.githubusercontent.com/57430754/123395425-262d7700-d5db-11eb-984b-d571b1498f30.png)
+![Case1](https://user-images.githubusercontent.com/57430754/123596071-a696e680-d82c-11eb-985c-8c038e6cefd7.png)
 
 <br>
 
@@ -26,10 +26,13 @@
 
 - *테이블 관계 설정 필수*
 
+- Month_Cumulateve_Sales = CALCULATE([총매출], DATESMTD(M_DATE[Date]))
+
 <br>
 
 ## Reference DAX
 
 - 월별누적합계 = TOTALMTD(SUM(MAIN_TABLE[WON_PRICE]),M_DATE[Month])
-- 
+
+  
 
