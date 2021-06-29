@@ -239,3 +239,11 @@ Top5 = CALCULATE([총매출], KEEPFILTERS(topn(5, all('제품정보'[제품명])
 
 전월매출:=CALCULATE(SUM('PRODUCT'[sales]),
     DATEADD('calendar'[Date], -1, MONTH))
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+<DAX>
+
+당월 = CALCULATE(SUM('ORDERDETAIL'[sales]), FILTER('calendar', YEAR('calendar'[Date]) = YEAR(max('calendar'[Date]))&MONTH(max('calendar'[Date]))))
