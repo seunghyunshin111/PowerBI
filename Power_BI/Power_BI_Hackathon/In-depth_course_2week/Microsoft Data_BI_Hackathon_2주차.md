@@ -31,7 +31,9 @@ Microsoft Azure 계좌 생성 / Azure 내 SQL 서버 관리자 계정 생성 (�
 - 보기 > 속성 창 설정
 - 테이블 형식 모델 탐색기 > 데이터 원본 > 오른쪽 버튼 > 새 데이터 원본 > sql server database > azure sql sever의 서버 이름 복사 및 붙여넣기 > 데이터베이스 > sql server 계정 정보 입력 > 오른쪽 단추 테이블 가져오기 > 테이블 정보 확인 가능
   - 테이블 업로드 & 쿼리 편집기 사용 가능
-- 
+- <관계 설정> diagram: 관계를 어떻게 설정할 것인지에 관한 인사이트 역량
+- 테이블 생성 DAX 함수 사용
+- <함수 생성> - <Analysis Service> 활용 - <BI 만들기>
 
 <br>
 
