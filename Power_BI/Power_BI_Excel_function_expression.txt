@@ -1,5 +1,5 @@
 Power BI
-- Filtering of Excel data function expression
+- Filtering of Excel data function expression (DAX)
 
 
 
@@ -169,7 +169,7 @@ CALCULATE([총매출], FILTER(all('달력'), year('달력'[Date])&MONTH('달력'
 
 ** 위도/경도가 가장 좋다
 
-** 주소 앞에 [대한민국] 국가명 써야 제대로 이식
+** 주소 앞에 [대한민국] 국가명 써야 제대로 인식
 
 
 - 주소2 = [국가명]&" "&[주소]
@@ -205,5 +205,37 @@ Top5 = CALCULATE([총매출], topn(5, all('제품정보'[제품명]), [총매출
 Top5 = CALCULATE([총매출], KEEPFILTERS(topn(5, all('제품정보'[제품명]), [총매출], DESC)))
 
 
+----------------------------------------------------------------------------------------------------------------------------
 
 
+******<년 & 월 테이블 생성 DAX> in Visual Studio 2019 (Excel&SQL)
+
+
+= ADDCOLUMNS(CALENDAR(min('ORDERT'[ORDERDATE]), max('ORDERT'[ORDERDATE])), 
+    "년도", FORMAT([Date], "yyyy년"))
+
+= ADDCOLUMNS(CALENDAR(min('ORDERT'[ORDERDATE]), max('ORDERT'[ORDERDATE])), 
+    "년도", FORMAT([Date], "yyyy년"), "월(한글)", FORMAT([Date], "m월"),
+    "월", MONTH([Date]))
+
+
+******<계산열>
+
+=[PRICE]*[QTY]  : 금액
+
+
+
+******<측정값>  --> table sheet 아무 곳에나 입력
+
+
+표시년도:=YEAR(MAX('calendar'[Date]))
+표시월:=month(max('calendar'[Date]))
+
+
+당월매출:=CALCULATE(SUM('PRODUCT'[sales]),
+    FILTER('calendar', YEAR('calendar'[Date])&MONTH('calendar'[Date])
+    = YEAR(MAX('calendar'[Date]))&MONTH(MAX('calendar'[Date]))))
+
+
+전월매출:=CALCULATE(SUM('PRODUCT'[sales]),
+    DATEADD('calendar'[Date], -1, MONTH))
