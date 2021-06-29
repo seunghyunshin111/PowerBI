@@ -1,13 +1,39 @@
 # Microsoft Data & BI Hackathon 2주차
 
-<br>(심화 과정)
+<br>- 심화 과정
+
+Microsoft Azure 계좌 생성 / Azure 내 SQL 서버 관리자 계정 생성 (로그인 정보 개인 보관)
 
 ## Microsoft Azure
 
 - 계좌 등록 (회사)
 - Azure pass 등록 완료
 - 카드 등록 시에는 상태 비활성을 해놔야 요금 청구 X
-- resource, storage, datafactory, sql database, analysis services 만들기 완료
+- resource, storage, datafactory, sql database, analysis service 만들기 완료
 - 비용 청구 부분 사용 시 확인 해야 함
 - server / analysis service : 비용 부분
+
+<br>
+
+## Microsoft SQL Server Management Studio
+
+- Azure에서 생성한 SQL 서버 관리자 로그인 정보 입력하여 로그인
+- Microsoft Azure Data Factory: 통합 런타임 설치 (빠른 설치)
+- -> 연결된 서비스 / Blob Storage 생성 & SQL 생성
+- Data Factory -> 파이프라인 생성 / excel(in blob storage), sql data 가져와서 매핑 및 디버깅 -> sql 서버에서 확인하면 테이블 매핑된 것 확인 가능
+  - 만들어진 sql 테이블에 excel 데이터 머리글 기준 매핑해서 넣은 것
+
+<br>
+
+## Visual Studio 2019
+
+
+
+<br>
+
+## Project.
+
+- Lab실 진행
+- Team 구성
+- 노트북 지참
 - 
