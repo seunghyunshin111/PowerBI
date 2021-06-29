@@ -22,8 +22,8 @@ Microsoft Azure 계좌 생성 / Azure 내 SQL 서버 관리자 계정 생성 (�
 - -> 연결된 서비스 / Blob Storage 생성 & SQL 생성
 - Data Factory -> 파이프라인 생성 / excel(in blob storage), sql data 가져와서 매핑 및 디버깅 -> sql 서버에서 확인하면 테이블 매핑된 것 확인 가능
   - 만들어진 sql 테이블에 excel 데이터 머리글 기준 매핑해서 넣은 것
-
-<br>
+  
+    <br>
 
 ## Visual Studio 2019
 
@@ -34,6 +34,13 @@ Microsoft Azure 계좌 생성 / Azure 내 SQL 서버 관리자 계정 생성 (�
 - <관계 설정> diagram: 관계를 어떻게 설정할 것인지에 관한 인사이트 역량
 - 테이블 생성 DAX 함수 사용
 - <함수 생성> - <Analysis Service> 활용 - <BI 만들기>
+- 데이터 정제 후 > Analysis service에 솔루션 배포
+
+<br>
+
+## Power BI
+
+- Azure 계정을 통해 SQL Analysis service 모델 배포한 것 가져오기
 
 <br>
 
