@@ -27,7 +27,11 @@ Microsoft Azure 계좌 생성 / Azure 내 SQL 서버 관리자 계정 생성 (�
 
 ## Visual Studio 2019
 
-
+- data analysis 분석 - > 해커톤 으로 프로젝트 생성
+- 보기 > 속성 창 설정
+- 테이블 형식 모델 탐색기 > 데이터 원본 > 오른쪽 버튼 > 새 데이터 원본 > sql server database > azure sql sever의 서버 이름 복사 및 붙여넣기 > 데이터베이스 > sql server 계정 정보 입력 > 오른쪽 단추 테이블 가져오기 > 테이블 정보 확인 가능
+  - 테이블 업로드 & 쿼리 편집기 사용 가능
+- 
 
 <br>
 
