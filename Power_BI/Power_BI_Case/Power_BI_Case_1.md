@@ -1,10 +1,10 @@
 # Power_BI_Case_1
 
-![Case1](https://user-images.githubusercontent.com/57430754/123908957-49796d00-d9b3-11eb-9237-ff9d7263f83b.png)
+![Case1](https://user-images.githubusercontent.com/57430754/123914629-8e54d200-d9ba-11eb-919c-86e654ed4774.png)
 
 <br>
 
-## Using Tools
+## Using Tool
 
 - Slicer / ChickletSlicer1.6.3
 
@@ -24,14 +24,15 @@
 
 - 전월매출_2 = 
 
-  var m=EDATE(MAX('M_DATE'[Date]),-1)
+  var m=EDATE(MAX('M_DATE_1'[Date]),-1)
 
   return
 
-  CALCULATE([총매출],FILTER(ALL('M_DATE'),YEAR('M_DATE'[Date])&MONTH('M_DATE'[Date])=year(m)&MONTH(m)))
+  CALCULATE([총매출],FILTER(all('M_DATE_1'),YEAR('M_DATE_1'[Date])&MONTH('M_DATE_1'[Date])=year(m)&MONTH(m)))
+
+  - 전월매출 사용 시, all로 데이터 테이블 함수 사용해야, 당월 제외한 전월 수치만 페이지에 나오게 된다.
 
 - *테이블 관계 설정 필수*
-
 - Month_Cumulateve_Sales = CALCULATE([총매출], DATESMTD(M_DATE[Date]))
 
 <br>
