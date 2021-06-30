@@ -1,6 +1,12 @@
 # Power_BI_Case_1
 
-![Case1](https://user-images.githubusercontent.com/57430754/123596071-a696e680-d82c-11eb-985c-8c038e6cefd7.png)
+![Case1](https://user-images.githubusercontent.com/57430754/123908957-49796d00-d9b3-11eb-9237-ff9d7263f83b.png)
+
+<br>
+
+## Using Tool
+
+- Slicer / ChickletSlicer1.6.3
 
 <br>
 
@@ -34,5 +40,7 @@
 
 - 월별누적합계 = TOTALMTD(SUM(MAIN_TABLE[WON_PRICE]),M_DATE[Month])
 
+  
+  
   
 
