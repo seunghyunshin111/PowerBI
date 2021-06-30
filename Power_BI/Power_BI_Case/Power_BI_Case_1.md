@@ -4,7 +4,7 @@
 
 <br>
 
-## Using Tool
+## Using Tools
 
 - Slicer / ChickletSlicer1.6.3
 
