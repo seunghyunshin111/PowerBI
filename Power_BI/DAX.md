@@ -39,3 +39,5 @@
 
   > Reference 가 많아서 좋다.
 
+- [Power BI 설명서](https://docs.microsoft.com/ko-kr/power-bi/) : 틈틈이 보면 좋을 듯. 수업 교재 개념
+- Power BI - Github 연결 계정 (데이터 공유 없이도 되는지 확인)
