@@ -1,6 +1,6 @@
 # Power_BI_Case_1
 
-![Case1](https://user-images.githubusercontent.com/57430754/123914629-8e54d200-d9ba-11eb-919c-86e654ed4774.png)
+![Case1](https://user-images.githubusercontent.com/57430754/123919822-4c2e8f00-d9c0-11eb-81d5-8c029253b42b.png)
 
 <br>
 
@@ -33,7 +33,10 @@
   - 전월매출 사용 시, all로 데이터 테이블 함수 사용해야, 당월 제외한 전월 수치만 페이지에 나오게 된다.
 
 - *테이블 관계 설정 필수*
+
 - Month_Cumulateve_Sales = CALCULATE([총매출], DATESMTD(M_DATE[Date]))
+
+- Month_Cumulateve_Sales_2 = TOTALMTD([총매출], 'M_DATE_1'[Date])
 
 <br>
 
