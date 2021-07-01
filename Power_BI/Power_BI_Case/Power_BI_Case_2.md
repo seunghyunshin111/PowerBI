@@ -28,5 +28,9 @@
         )
     )
   
-- 
+- 새 <날짜 열> 생성
+
+  - OUT_DATE = EOMONTH(MIN(MAIN_TABLE[OUT_DATE]), 20)
+
+    
 
