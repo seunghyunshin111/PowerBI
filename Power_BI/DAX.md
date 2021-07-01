@@ -41,3 +41,65 @@
 
 - [Power BI 설명서](https://docs.microsoft.com/ko-kr/power-bi/) : 틈틈이 보면 좋을 듯. 수업 교재 개념
 - Power BI - Github 연결 계정 (데이터 공유 없이도 되는지 확인)
+
+<br>
+
+<br>
+
+## Making Dax
+
+```dax
+# 활용1
+
+column1 =
+IF(   AND(
+       'Butikk'[Itemclass]' = 2,
+       'Butikk'[sales code] = 7 || 'Butikk'[sales code] = 8 || 'Butikk'[sales code] = 9      ),
+   "True", "False"  )
+```
+
+```dax
+# 활용2
+
+Price Group =
+IF(
+    'Product'[List Price] < 500,
+    "Low",
+    IF(
+        'Product'[List Price] < 1500,
+        "Medium",
+        "High"
+    )
+)
+```
+
+```dax
+# 최종 Output
+
+PROD_CATEGORY = ADDCOLUMNS(SUMMARIZE('MAIN_TABLE', MAIN_TABLE[PROD_DEPT_NM]),
+"TECH_METHOD", SWITCH([PROD_DEPT_NM],"LO Group", "Cleaning", "특수관리팀", "Cleaning", "FA Group", "Cleaning", "LEMON Group", "Cleaning", "ST Group", "Cleaning", "Col Group", "Cleaning", "표면기술팀", "Super Coating", "기술개발팀", "Cleaning", "AMONG Coating", "AMONG Coating", "MONTRA Coating", "MONTRA Coating", "BAM Coating", "BAM Coating"), "SERVICE", IF(
+    [PROD_DEPT_NM] = "AMONG Coating",
+    "Coating",
+    IF(
+        [PROD_DEPT_NM] = "MONTRA Coating" || [PROD_DEPT_NM] = "BAM Coating",
+        "Coating",
+        "Cleaning"
+    )
+), "생산/기술", IF(
+        [PROD_DEPT_NM] = "특수관리팀" || [PROD_DEPT_NM] = "표면기술팀" || [PROD_DEPT_NM] = "기술개발팀",
+        "기술",
+        "생산"
+    )
+)
+```
+
+
+
+
+
+
+
+
+
+
+
