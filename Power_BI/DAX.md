@@ -93,13 +93,13 @@ PROD_CATEGORY = ADDCOLUMNS(SUMMARIZE('MAIN_TABLE', MAIN_TABLE[PROD_DEPT_NM]),
 )
 ```
 
+<br>
 
+```dax
+< 특정 테이블>에서 <열 추가>
 
-
-
-
-
-
+- OUT_DATE = MIN(MAIN_TABLE[OUT_DATE]) : 가장 빠른 날짜를 시작 날짜 추출
+```
 
 
 
