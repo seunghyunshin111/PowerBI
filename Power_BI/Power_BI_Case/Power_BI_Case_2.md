@@ -2,6 +2,10 @@
 
 <br>
 
+![image](https://user-images.githubusercontent.com/57430754/124092230-96337580-da91-11eb-820f-4732c2e2f245.png)
+
+<br>
+
 ## Using DAX
 
 <새 테이블 / 특정 데이터 열 기준으로 새로운 열 생성>
@@ -27,7 +31,11 @@
             "생산"
         )
     )
-  
+
+<br>
+
+- Current Month = CALCULATE([총매출], DATESMTD(M_DATE_1[Date]))
+
 - 새 <날짜 열> 생성
 
   - OUT_DATE = EOMONTH(MIN(MAIN_TABLE[OUT_DATE]), 20)
