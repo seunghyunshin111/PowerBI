@@ -44,6 +44,8 @@
 
 <br>
 
+##### 자세한 구현 내용은 Private Repository에
+
 <br>
 
 ## Making Dax
@@ -100,6 +102,55 @@ PROD_CATEGORY = ADDCOLUMNS(SUMMARIZE('MAIN_TABLE', MAIN_TABLE[PROD_DEPT_NM]),
 
 - OUT_DATE = MIN(MAIN_TABLE[OUT_DATE]) : 가장 빠른 날짜를 시작 날짜 추출
 ```
+
+<br>
+
+```dax
+# 1
+cumulative total (lm) = CALCULATE([cumulative total]; DATEADD(Calendar[Date]; -1; Month))
+
+# 2
+cumulative total = CALCULATE([Total]; DATESBETWEEN(Calendar[Date]; MIN('Dimension'[StartDate]); MAX(Calendar[Date])))
+
+--------------------------------------------------------------
+
+# Output
+Previous Month = TOTALMTD([총매출], DATEADD(M_DATE_1[Date], -1, MONTH))
+
+-- 무슨 차이인지 모르겠으나, 다시 돌려보니 값이 잘 나온다. 
+-- Power BI 상에서 [Tab] 기능처럼 뜨는 테이블을 선택하면 오류 줄임.
+-- Dax 함수식이 맞는데 값이 안 나온다 하면, 처음부터 다시 작성해 볼 것.
+```
+
+<br>
+
+```dax
+# y축 값 표기 (70% -> 0.7)로 바꾸는 방법
+
+- 측정값!! 
+- coating / cleaning 각각의 sum을 구한 후, 비율을 계산해야 할 것.
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
