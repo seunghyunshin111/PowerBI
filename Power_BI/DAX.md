@@ -132,7 +132,44 @@ Previous Month = TOTALMTD([총매출], DATEADD(M_DATE_1[Date], -1, MONTH))
 
 ```
 
+<br>
 
+```dax
+# 1
+Expected Result =
+VAR Summary =
+    SUMMARIZE (
+        Unique_Manager,
+        Unique_Manager[Manager],
+        "Budget_Brand", SUM ( Budget_Brand[BudgetBrand] ),
+        "Budget_Product", SUM ( Budget_Product[BudgetProduct] )
+    )
+RETURN
+    SUMX (
+        Summary,
+        IF ( ISBLANK ( [Budget_Product] ), [Budget_Brand], [Budget_Product] )
+    )
+    
+    
+# 2
+    
+Expected Result =
+SUMX (
+    VALUES ( Unique_Manager[Manager] ),
+    VAR SumBrand = CALCULATE ( SUM ( Budget_Brand[BudgetBrand] ) )
+    VAR SumProduct = CALCULATE ( SUM ( Budget_Product[BudgetProduct] ) )
+    RETURN
+        IF ( ISBLANK ( SumProduct ), SumBrand, SumProduct )
+)
+```
+
+```
+# Output
+
+2_매출 = SUMX(CALCULATETABLE('MAIN_TABLE', 'MAIN_TABLE'[SERVICE] = "Coating" || 'MAIN_TABLE'[SERVICE] = "Cleaning"), 'MAIN_TABLE'[SERVICE] = "Coating")
+```
+
+[매출액 비율(%), 0.00 표기 참고](https://m.blog.naver.com/daxingintherain/221828808615)
 
 
 
