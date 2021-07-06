@@ -6,6 +6,10 @@
 
 <br>
 
+![Case3_2](https://user-images.githubusercontent.com/57430754/124549303-f21f4500-de69-11eb-8784-b83e414d7fe2.png)
+
+<br>
+
 - 분석에 더해 PT 보고 능력 기르기 With Power BI(TSQL)
 - 톤앤 매너 지키기 (주황)
 - 가독성 좋은 글씨체 및 그래프 위치 선정
