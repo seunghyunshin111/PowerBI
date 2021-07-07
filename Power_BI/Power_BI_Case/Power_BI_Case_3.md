@@ -15,3 +15,9 @@
 - 가독성 좋은 글씨체 및 그래프 위치 선정
 - Python, R, SQL 활용하여 데이터 분석 및 PT 능력 기르기
 - 분석 재밌어
+
+<br>
+
+![Case3_3](https://user-images.githubusercontent.com/57430754/124708404-3297c500-df35-11eb-89cd-649f67727ac8.png)
+
+- 데이터 일부 클릭 시 디테일한 필터 정보 확인 가능
