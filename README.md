@@ -1,4 +1,4 @@
-# Tableau_PowerBI
+# PowerBI
 For Data Analysis and Visualization
 
 <br>
